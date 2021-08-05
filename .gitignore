@@ -1,0 +1,12 @@
+.vs/
+Release/
+*.sdf
+*.opensdf
+*.log
+*.dll
+*.obj
+*.so
+*.o
+*.user
+*.filters
+*.suo

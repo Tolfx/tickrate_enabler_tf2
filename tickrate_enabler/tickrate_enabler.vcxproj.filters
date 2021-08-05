@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\serverplugin_empty.cpp">
+    <ClCompile Include="..\TickrateEnabler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
