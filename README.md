@@ -1,6 +1,6 @@
 # Tickrate Enabler
 
-![Downloads](https://img.shields.io/github/downloads/zer0k-z/truestrike/total?style=flat-square) ![Last commit](https://img.shields.io/github/last-commit/zer0k-z/truestrike?style=flat-square) ![Open issues](https://img.shields.io/github/issues/zer0k-z/truestrike?style=flat-square) ![Closed issues](https://img.shields.io/github/issues-closed/zer0k-z/truestrike?style=flat-square) ![Size](https://img.shields.io/github/repo-size/zer0k-z/truestrike?style=flat-square)
+![Downloads](https://img.shields.io/github/downloads/zer0k-z/tickrate_enabler_csgo/total?style=flat-square) ![Last commit](https://img.shields.io/github/last-commit/zer0k-z/tickrate_enabler_csgo?style=flat-square) ![Open issues](https://img.shields.io/github/issues/zer0k-z/tickrate_enabler_csgo?style=flat-square) ![Closed issues](https://img.shields.io/github/issues-closed/zer0k-z/tickrate_enabler_csgo?style=flat-square) ![Size](https://img.shields.io/github/repo-size/zer0k-z/tickrate_enabler_csgo?style=flat-square)
 
 In CS:GO, tick intervals are quantized to the nearest N / 512 fraction. 
 
