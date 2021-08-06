@@ -9,9 +9,9 @@ The only possible tickrates are: 128.0, 102.4, 85.33, 73.14, 64.0, 56.89, 51.2, 
 The CS:GO port of Tickrate Enabler gets rid of this limitation, but tickrate will stay bounded between 20.48 and 128, as while it is possible to go under or over this limit, client-side codes will block players from joining such servers.
 
 ## How to use:
-1. Get the latest release for your OS at: `https://github.com/zer0k-z/TickrateEnablerCSGO/releases`
+1. Get the latest release for your OS at: `https://github.com/zer0k-z/tickrate_enabler_csgo/releases`
 
-2. Extract the archive to your server folder
+2. Extract the archive to your server folder (csgo)
 
 3. Add `-tickrate <number>` to your launch parameters
 
