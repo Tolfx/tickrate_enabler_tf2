@@ -23,15 +23,15 @@ INCLUDES=-I$(HL2SDK)/public -I$(HL2SDK)/public/tier0 -I$(HL2SDK)/public/tier1 -I
 # Include the folder with the Source SDK libraries
 LINKFLAGS=-shared -m32 -L$(HL2SDK)/lib/linux
 
-all: TickrateEnabler.o TickrateEnabler.so
+all: tickrate_enabler.o tickrate_enabler.so
 
-TickrateEnabler.o:
-	$(CXX) $(CFLAGS) $(OPTFLAGS) $(INCLUDES) -c TickrateEnabler.cpp
+tickrate_enabler.o:
+	$(CXX) $(CFLAGS) $(OPTFLAGS) $(INCLUDES) -c tickrate_enabler.cpp
 
-TickrateEnabler.so:
-	$(CC) -o TickrateEnabler.so $(LINKFLAGS) TickrateEnabler.o $(MMSDK)/build/core/metamod.2.csgo/linux-x86/sourcehook_sourcehook*.o \
-	-l:libtier0.so -l:tier1_i486.a -static-libstdc++ -lm -ldl
+tickrate_enabler.so:
+	$(CC) -o tickrate_enabler.so $(LINKFLAGS) tickrate_enabler.o $(MMSDK)/build/core/metamod.2.csgo/linux-x86/sourcehook_sourcehook*.o \
+	-l:libtier0.so -l:tier1_i486.a -lm -ldl -lstdc++
 
 clean:
-	-rm -f TickrateEnabler.o
-	-rm -f TickrateEnabler.so
+	-rm -f tickrate_enabler.o
+	-rm -f tickrate_enabler.so

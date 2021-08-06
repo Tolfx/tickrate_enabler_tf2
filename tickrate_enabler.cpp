@@ -1,6 +1,5 @@
 #include "eiface.h"
 #include "sourcehook/sourcehook_impl.h"
-
 class TickrateEnabler : public IServerPluginCallbacks
 {
 public:
@@ -36,6 +35,8 @@ public:
 	virtual bool BNetworkCryptKeyCheckRequired(uint32 unFromIP, uint16 usFromPort, uint32 unAccountIdProvidedByClient, bool bClientWantsToUseCryptKey) { return false; };
 	virtual bool BNetworkCryptKeyValidate(uint32 unFromIP, uint16 usFromPort, uint32 unAccountIdProvidedByClient, int nEncryptionKeyIndexFromClient, int numEncryptedBytesFromClient, byte *pbEncryptedBufferFromClient, byte *pbPlainTextKeyForNetchan) { return false; };
 };
+// No idea why this is required for linux.
+ICvar *g_pCVar = NULL;
 
 TickrateEnabler g_EmptyServerPlugin;
 EXPOSE_SINGLE_INTERFACE_GLOBALVAR(TickrateEnabler, IServerPluginCallbacks, INTERFACEVERSION_ISERVERPLUGINCALLBACKS, g_EmptyServerPlugin);
@@ -61,7 +62,7 @@ float GetTickInterval()
 	if (CommandLine()->CheckParm("-tickrate"))
 	{
 		float tickrate = CommandLine()->ParmValue("-tickrate", 0);
-		clamp(tickrate, TICKRATE_MIN, TICKRATE_MAX);
+		clamp(tickinterval, TICKRATE_MIN, TICKRATE_MAX);
 		tickinterval = 1.0 / tickrate;
 	}
 
