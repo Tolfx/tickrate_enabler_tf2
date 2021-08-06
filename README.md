@@ -6,12 +6,12 @@ In CS:GO, tick intervals are quantized to the nearest N / 512 fraction.
 
 The only possible tickrates are: 128.0, 102.4, 85.33, 73.14, 64.0, 56.89, 51.2, 46.55, 42.67, 39.38, 36.57, 34.13, 32.0, 30.12, 28.44, 26.95, 25.60, 24.38, 23.27, 22.26, 21.33, 20.48.
 
-The CS:GO port of Tickrate Enabler gets rid of this limitation.
+The CS:GO port of Tickrate Enabler gets rid of this limitation, but tickrate will stay bounded between 20.48 and 128, as while it is possible to go under or over this limit without server crash, client-side codes will block players from joining such servers.
 
 ## How to use:
-1. Get the latest release for your OS at: `https://github.com/zer0k-z/TickrateEnablerCSGO/releases`
+1. Get the latest release for your OS at: `https://github.com/zer0k-z/tickrate_enabler_csgo/releases`
 
-2. Extract the archive to your server folder
+2. Extract the archive to your server folder (csgo)
 
 3. Add `-tickrate <number>` to your launch parameters
 
