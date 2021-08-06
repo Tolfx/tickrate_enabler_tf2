@@ -61,7 +61,7 @@ float GetTickInterval()
 
 	if (CommandLine()->CheckParm("-tickrate"))
 	{
-		float tickrate = CommandLine()->ParmValue("-tickrate", 0);
+		float tickrate = CommandLine()->ParmValue("-tickrate", TICKRATE_DEFAULT);
 		clamp(tickinterval, TICKRATE_MIN, TICKRATE_MAX);
 		tickinterval = 1.0 / tickrate;
 	}
