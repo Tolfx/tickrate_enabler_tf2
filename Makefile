@@ -13,7 +13,7 @@ OPTFLAGS=-O2
 # locations for your system.
 # ******************************
 # The path to the Source SDK to use
-HL2SDK=../hl2sdk-csgo
+HL2SDK=../hl2sdk-tf2
 # The path to the Metamod source tree
 MMSDK=../metamod-source
 
@@ -29,8 +29,8 @@ tickrate_enabler.o:
 	$(CXX) $(CFLAGS) $(OPTFLAGS) $(INCLUDES) -c tickrate_enabler.cpp
 
 tickrate_enabler.so:
-	$(CC) -o tickrate_enabler.so $(LINKFLAGS) tickrate_enabler.o $(MMSDK)/build/core/metamod.2.csgo/linux-x86/sourcehook_sourcehook*.o \
-	-l:libtier0.so -l:tier1_i486.a -lm -ldl -lstdc++
+	$(CC) -o tickrate_enabler.so $(LINKFLAGS) tickrate_enabler.o $(MMSDK)/build/core/metamod.2.tf2/linux-x86/sourcehook_sourcehook*.o \
+	-l:libtier0_srv.so -l:tier1_i486.a -lm -ldl -lstdc++
 
 clean:
 	-rm -f tickrate_enabler.o

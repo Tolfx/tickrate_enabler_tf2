@@ -50,33 +50,20 @@ SH_DECL_HOOK0(IServerGameDLL, GetTickInterval, const, 0, float);
 
 IServerGameDLL *gamedll = NULL;
 
-// CSGO tickrate values
-#define TICKRATE_DEFAULT 64.0f
-#define TICKRATE_MIN 20.48f
-#define TICKRATE_MAX 128.0f
-
 float GetTickInterval()
 {
-	float tickinterval = 1.0 / TICKRATE_DEFAULT;
-
-	if (CommandLine()->CheckParm("-tickrate"))
-	{
-		float tickrate = CommandLine()->ParmValue("-tickrate", TICKRATE_DEFAULT);
-		clamp(tickinterval, TICKRATE_MIN, TICKRATE_MAX);
-		tickinterval = 1.0 / tickrate;
-	}
-
+	float tickinterval = 0.01f;
 	RETURN_META_VALUE(MRES_SUPERCEDE, tickinterval);
 }
 
 const char *TickrateEnabler::GetPluginDescription(void)
 {
-	return "TickrateEnabler for CS:GO";
+	return "TickrateEnabler for TF2";
 }
 
 bool TickrateEnabler::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory)
 {
-	gamedll = (IServerGameDLL *)gameServerFactory("ServerGameDLL005", NULL);
+	gamedll = (IServerGameDLL *)gameServerFactory("ServerGameDLL012", NULL);
 	if (!gamedll)
 	{
 		Warning("Failed to get a pointer on ServerGameDLL.\n");
