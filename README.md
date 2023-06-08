@@ -1,7 +1,7 @@
 # Tickrate Enabler
 
 ## How to use:
-1. Get the latest release at: `https://github.com/silenceaqua/tickrate_enabler_tf2/releases`
+1. Get the latest release at: `https://github.com/aqua-hopps/tickrate_enabler_tf2/releases`
 
 2. Extract the archive to your TF2 addons folder.
 
