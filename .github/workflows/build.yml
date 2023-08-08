@@ -68,7 +68,7 @@ jobs:
           ls -la
           mkdir build
           cd build
-          python ../metamod-soure/configure.py
+          python ../metamod-source/configure.py
           ls -la
           # Then build
           ambuild
