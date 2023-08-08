@@ -20,7 +20,7 @@ ENGINE ?= orangeboxvalve
 #####################################
 
 PROJECT = unlocked_tickrate
-OBJECTS = plugin.cpp
+OBJECTS = tickrate_enabler.cpp
 
 ##############################################
 ### CONFIGURE ANY OTHER FLAGS/OPTIONS HERE ###
