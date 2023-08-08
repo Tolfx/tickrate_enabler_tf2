@@ -1,4 +1,4 @@
-#include "eiface.h"
+#include "hls2dk-tf2/public/eiface.h"
 #include "metamod-source/core/sourcehook/sourcehook_impl.h"
 class TickrateEnabler : public IServerPluginCallbacks
 {
