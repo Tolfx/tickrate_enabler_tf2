@@ -11,8 +11,6 @@ jobs:
       matrix:
         tickrate:
           - ''
-          - 100
-          - 200
         os:
           - ubuntu-20.04
 
@@ -62,8 +60,8 @@ jobs:
       - name: Compiling
         working-directory: TickrateEnabler
         run: |
-          cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-m32" -DCMAKE_C_FLAGS="-m32" -DCMAKE_ASM_FLAGS="-m32" -DCMAKE_SHARED_LINKER_FLAGS="-m32" -DCMAKE_EXE_LINKER_FLAGS="-m32" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ..
-          make -j$(nproc)
+          # We have a Makefile in the root directory so we only use make not cmake
+          make
 
       - name: Uploading package
         uses: actions/upload-artifact@v3
