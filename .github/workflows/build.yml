@@ -80,7 +80,7 @@ jobs:
           ls -la
           ls -la build
           ls -la metamod-source
-          ls -la metamod-source/build
+          ls -la metamod-source/build/core
 
       - name: Checking out own repository
         uses: actions/checkout@v3
