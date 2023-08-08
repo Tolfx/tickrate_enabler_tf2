@@ -74,6 +74,13 @@ jobs:
           # Then build
           ambuild
 
+          cd ..
+
+          # Check if we have build/core/metamod.2.tf2/linux-x86/sourcehook_sourcehook
+          ls -la
+          ls la metamod-source
+          ls la metamod-source/build
+
       - name: Checking out own repository
         uses: actions/checkout@v3
         with:
