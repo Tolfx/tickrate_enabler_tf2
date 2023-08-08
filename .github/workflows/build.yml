@@ -58,16 +58,16 @@ jobs:
           path: TickrateEnabler
 
       - name: Compiling
-        working-directory: TickrateEnabler
+        # working-directory: TickrateEnabler
         run: |
           # We have a Makefile in the root directory so we only use make not cmake
-          make -j$(nproc) -f ../Makefile
+          make -j$(nproc)
 
       - name: Uploading package
         uses: actions/upload-artifact@v3
         with:
           name: TickrateEnabler-${{ matrix.os_short }}-${{ env.GITHUB_SHA_SHORT }}
-          path: TickrateEnabler/objdir/package
+          path: objdir/package
 
   release:
     name: Release
