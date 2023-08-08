@@ -68,6 +68,7 @@ jobs:
           mkdir build
           cd build
           python ../metamod-source/configure.py
+          cd ..
           # Then build
           ambuild
 
