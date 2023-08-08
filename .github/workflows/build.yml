@@ -62,6 +62,16 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install git+https://github.com/alliedmodders/ambuild
 
+      # - name: Build MM:Source
+      #   working-directory: metamod-source
+      #   run: |
+      #     # First configure in build
+      #     ls -la
+      #     python configure.py
+      #     ls -la
+      #     # Then build
+      #     ambuild
+
       - name: Checking out own repository
         uses: actions/checkout@v3
         with:
@@ -70,7 +80,7 @@ jobs:
       - name: Build MM:Source
         working-directory: TickrateEnabler
         run: |
-          python3 configure.py --enable-optimize --symbol-files --sdks=tf2 --target=x86 --tickrate=${{ matrix.tickrate }}
+          python3 configure.py --enable-optimize --symbol-files --sdks=tf2 --target=x86
           ambuild objdir
 
       - name: Compiling
