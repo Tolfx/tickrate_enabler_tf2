@@ -2,7 +2,3 @@
 	path = metamod-source
 	url = https://github.com/alliedmodders/metamod-source
 
-[submodule "hls2dk-tf2"]
-	path = hls2dk-tf2
-	url = https://github.com/alliedmodders/hl2sdk
-	branch = tf2
