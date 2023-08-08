@@ -68,6 +68,7 @@ jobs:
           # First configure in build
           ls -la
           python configure.py
+          ls -la
           # Then build
           ambuild
 
