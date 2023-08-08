@@ -18,7 +18,7 @@ HL2SDK=hl2sdk-tf2
 MMSDK=../metamod-source
 
 # Include Source SDK directories
-INCLUDES=-I$(HL2SDK)/public -I$(HL2SDK)/public/tier0 -I$(HL2SDK)/public/tier1 -I$(MMSDK)/core
+INCLUDES=I. -I.. -I$(HL2SDK)/public -I$(HL2SDK)/public/engine -I$(HL2SDK)/public/mathlib -I$(HL2SDK)/public/vstdlib -I$ -I$(HL2SDK)/public/tier0 -I$(HL2SDK)/public/tier1 -I$(MMSDK)/core
 
 # Include the folder with the Source SDK libraries
 LINKFLAGS=-shared -m32 -L$(HL2SDK)/lib/linux
