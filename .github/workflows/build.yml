@@ -46,12 +46,12 @@ jobs:
           path: metamod-source
           submodules: recursive
 
-      # - name: Checking out hl2sdk-tf2
-      #   uses: actions/checkout@v3
-      #   with:
-      #     repository: alliedmodders/hl2sdk
-      #     ref: tf2
-      #     path: hl2sdk-tf2
+      - name: Checking out hl2sdk-tf2
+        uses: actions/checkout@v3
+        with:
+          repository: alliedmodders/hl2sdk
+          ref: tf2
+          path: hl2sdk-tf2
 
       - name: Setting up Python
         uses: actions/setup-python@v4

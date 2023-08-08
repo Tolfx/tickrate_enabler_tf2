@@ -13,7 +13,7 @@ OPTFLAGS=-O2
 # locations for your system.
 # ******************************
 # The path to the Source SDK to use
-HL2SDK=../hl2sdk-tf2
+HL2SDK=hl2sdk-tf2
 # The path to the Metamod source tree
 MMSDK=../metamod-source
 
