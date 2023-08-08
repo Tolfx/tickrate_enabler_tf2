@@ -38,13 +38,13 @@ jobs:
           echo "CC=clang" >> $GITHUB_ENV
           echo "CXX=clang++" >> $GITHUB_ENV
 
-      # - name: Checking out MM:Source
-      #   uses: actions/checkout@v3
-      #   with:
-      #     repository: alliedmodders/metamod-source
-      #     ref: master
-      #     path: metamod-source
-      #     submodules: recursive
+      - name: Checking out MM:Source
+        uses: actions/checkout@v3
+        with:
+          repository: alliedmodders/metamod-source
+          ref: master
+          path: metamod-source
+          submodules: recursive
 
       - name: Checking out hl2sdk-tf2
         uses: actions/checkout@v3
