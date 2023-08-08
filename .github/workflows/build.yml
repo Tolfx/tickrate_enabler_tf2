@@ -58,10 +58,10 @@ jobs:
           path: TickrateEnabler
 
       - name: Compiling
-        # working-directory: TickrateEnabler
+        working-directory: TickrateEnabler
         run: |
           # We have a Makefile in the root directory so we only use make not cmake
-          make -j$(nproc)
+          make -j$(nproc) -f Makefile
 
       - name: Uploading package
         uses: actions/upload-artifact@v3
