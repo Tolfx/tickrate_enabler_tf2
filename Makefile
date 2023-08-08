@@ -15,7 +15,7 @@ OPTFLAGS=-O2
 # The path to the Source SDK to use
 HL2SDK=../hl2sdk-tf2
 # The path to the Metamod source tree
-MMSDK=../build
+MMSDK=../metamod-source
 
 # Include Source SDK directories
 INCLUDES=-I$(HL2SDK)/public -I$(HL2SDK)/public/tier0 -I$(HL2SDK)/public/tier1 -I$(MMSDK)/core

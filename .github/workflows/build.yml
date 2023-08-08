@@ -76,11 +76,9 @@ jobs:
 
           cd ..
 
-          # Check if we have build/core/metamod.2.tf2/linux-x86/sourcehook_sourcehook
-          ls -la
-          ls -la build
-          ls -la build/core
-          ls -la metamod-source/core/sourcehook
+          # Move build to metamod-source
+          mkdir metamod-source/build
+          mv build/* metamod-source/build
 
       - name: Checking out own repository
         uses: actions/checkout@v3
