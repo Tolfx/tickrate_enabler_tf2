@@ -65,8 +65,9 @@ jobs:
       - name: Build MM:Source
         run: |
           # First configure in build
-          ls -la
-          python metamod-source/configure.py
+          mkdir build
+          cd build
+          python ../metamod-source/configure.py
           # Then build
           ambuild
 
