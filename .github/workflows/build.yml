@@ -15,14 +15,10 @@ jobs:
           - 200
         os:
           - ubuntu-20.04
-          - windows-2019
 
         include:
           - os: ubuntu-20.04
             os_short: linux
-
-          - os: windows-2019
-            os_short: win
 
     steps:
       - name: Prepare env
@@ -66,8 +62,6 @@ jobs:
       - name: Compiling
         working-directory: TickrateEnabler
         run: |
-          mkdir objdir
-          cd objdir
           cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-m32" -DCMAKE_C_FLAGS="-m32" -DCMAKE_ASM_FLAGS="-m32" -DCMAKE_SHARED_LINKER_FLAGS="-m32" -DCMAKE_EXE_LINKER_FLAGS="-m32" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ../tickrate_enabler
           make -j$(nproc)
 
