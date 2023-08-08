@@ -1,5 +1,5 @@
 #include "eiface.h"
-#include "metamod-source/core/sourcehook/sourcehook_impl.h"
+#include "../metamod-source/core/sourcehook/sourcehook_impl.h"
 class TickrateEnabler : public IServerPluginCallbacks
 {
 public:
