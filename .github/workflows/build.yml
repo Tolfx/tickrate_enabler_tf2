@@ -67,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: TickrateEnabler-${{ matrix.os_short }}-${{ env.GITHUB_SHA_SHORT }}
-          path: objdir/package
+          path: TickrateEnabler
 
   release:
     name: Release
