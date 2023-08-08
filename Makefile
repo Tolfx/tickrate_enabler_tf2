@@ -29,7 +29,7 @@ tickrate_enabler.o:
 	$(CXX) $(CFLAGS) $(OPTFLAGS) $(INCLUDES) -c tickrate_enabler.cpp
 
 tickrate_enabler.so:
-	$(CC) -o tickrate_enabler.so $(LINKFLAGS) tickrate_enabler.o $(MMSDK)/core/metamod.2.tf2/linux-x86/sourcehook_sourcehook*.o \
+	$(CC) -o tickrate_enabler.so $(LINKFLAGS) tickrate_enabler.o $(MMSDK)/build/core/metamod.2.tf2/linux-x86/sourcehook_sourcehook*.o \
 	-l:libtier0_srv.so -l:tier1_i486.a -lm -ldl -lstdc++
 
 clean:
