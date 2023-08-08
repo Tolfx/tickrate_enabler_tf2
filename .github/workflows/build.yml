@@ -67,9 +67,7 @@ jobs:
         run: |
           # First configure in build
           ls -la
-          cd build
-          python ../configure.py
-          cd ..
+          python configure.py
           # Then build
           ambuild
 
